@@ -1,0 +1,168 @@
+.html{
+    scrollbar-width: none;
+}
+/* Sidebar styles */
+.sidebar {
+    @apply text-white h-full fixed top-0 left-0 w-64 flex flex-col;
+}
+
+/* Hide sidebar on small screens */
+@media (max-width: 1300px) {
+    .sidebar {
+        @apply hidden;
+    }
+}
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader {
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    animation: spin 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes spin {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(0.5) rotate(180deg);
+    }
+}
+
+
+.sidebar{
+    background-color: rgba(23, 23, 23, 0.83);
+
+}
+.nav-ayzen-logo{
+    background-color: rgb(229, 229, 229);
+    border-radius: 50%;
+    padding: 3px;
+    border: none;
+    animation: bounce-turn 7s infinite;
+}
+@keyframes bounce-turn {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.2) rotate(90deg);
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+    }
+    75% {
+        transform: scale(1.2) rotate(270deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+.main-chat-div{
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(30px);
+}
+.chat-div-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    height: 700px;
+    padding: 1rem;
+    gap: 1rem;
+}
+@media (min-width: 640px) {
+    .chat-div-container{
+        width: 800px;
+    }
+}
+@media (max-width: 700px) {
+    .chat-div-container {
+        width: auto;
+    }
+}
+.messages-div {
+    scrollbar-width: none;
+}
+
+.messages-div {
+    -ms-overflow-style: none;
+}
+.chatbot-home{
+    width: 100%;
+    height: 10vh;
+}
+.chatbot-text{
+    font-size: 24px;
+    font-weight: 200;
+    font-family: "Poppins", sans-serif;
+    color: #c7c7c7;
+}
+.chat-input{
+    background-color: rgba(49, 49, 49, 0.73);
+    max-width: 700px;
+    height: 45px;
+    padding-left: 25px;
+    color: #c7c7c7;
+    font-weight: 400;
+    border-radius: 50px;
+    border: none;
+    width: 100%;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .chat-input{
+        width: 800px;
+    }
+}
+@media (max-width: 700px) {
+    .chat-input {
+        width: auto;
+    }
+}
+.chatbot-messager{
+    position: relative;
+    animation: bounce 2s infinite;
+    padding: 2px;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+.send-button{
+    position: relative;
+    left: -50px;
+    bottom: -23px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #c7c7c7;
+    font-size: 12px;
+    transition: opacity 0.3s ease;
+}
+.logout-button{
+    background-color: rgba(255, 255, 255, 0.85);
+    align-items: center;
+    border-radius: 30px;
+    padding: 5px;
+}
+.ayzen-message-text{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}

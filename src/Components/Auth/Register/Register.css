@@ -1,0 +1,385 @@
+.register-main{
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    animation: spin 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes spin {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(0.5) rotate(180deg);
+    }
+}
+
+body.dark-mode {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    transition: transform 0.2s linear;
+}
+
+body.dark-mode a {
+    color: white;
+}
+body.dark-mode p {
+    color: white;
+}
+body.dark-mode h1 {
+    color: white;
+}
+
+body.light-mode a{
+    color: black;
+}
+
+
+.bg-section{
+    position: fixed;
+    z-index: -100;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.App {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+}
+.section-bg1{
+    position: absolute;
+    background-attachment: fixed;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgba(146, 196, 255, 0.89), rgba(255, 240, 170, 0.88));
+    filter: blur(100px);
+    animation: down 20s infinite;
+}
+.section-bg2{
+    position: absolute;
+    background-attachment: fixed;
+    right: 0;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgba(255, 240, 183, 0.93), rgba(166, 255, 247, 0.93));
+    filter: blur(100px);
+    animation: up 20s infinite;
+}
+@keyframes down{
+    0%, 100%{
+        top: -100px;
+    }
+    70%{
+        top: 700px;
+    }
+}
+
+@keyframes up{
+    0%, 100%{
+        bottom: -100px;
+    }
+    70%{
+        bottom: 700px;
+    }
+}
+.section-bg3{
+    position: absolute;
+    background-attachment: fixed;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #c9ffbd, rgba(221, 192, 255, 0.88));
+    filter: blur(100px);
+    animation: right 20s 1s infinite;
+}
+.section-bg4{
+    position: absolute;
+    background-attachment: fixed;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgba(180, 255, 250, 0.91), rgba(255, 201, 171, 0.89));
+    filter: blur(100px);
+    animation: left 20s .5s infinite;
+}
+@keyframes left{
+    0%, 100%{
+        left: -100px;
+    }
+    70%{
+        left: 100px;
+    }
+}
+@keyframes right{
+    0%, 100%{
+        right: -100px;
+    }
+    70%{
+        right: 100px;
+    }
+}
+.dark-mode {
+    color: #f0f0f0; /* Light text color */
+    height: 100vh;
+}
+
+.dark-mode .bg-section {
+    /* Ensure the background sections work well with dark mode */
+    position: fixed;
+    background-color: rgb(17, 17, 17);
+    z-index: -100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    backdrop-filter: blur(50px);
+}
+
+.dark-mode .section-bg1 {
+    background-image: linear-gradient(80deg, rgba(110, 185, 255, 0.2), rgba(255, 223, 111, 0.22));
+}
+
+.dark-mode .section-bg2 {
+    background-image: linear-gradient(80deg, rgba(203, 203, 203, 0.22), rgba(121, 185, 255, 0.23));
+}
+
+.dark-mode .section-bg3 {
+    background-image: linear-gradient(80deg, rgba(147, 255, 147, 0.22), rgba(202, 152, 255, 0.2));
+}
+
+.dark-mode .section-bg4 {
+    background-image: linear-gradient(80deg, rgba(144, 207, 255, 0.19), rgba(255, 186, 164, 0.18));
+}
+.register-container{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+.register-form{
+    background-color: rgba(121, 121, 121, 0.16);
+    backdrop-filter: blur(80px);
+    border-radius: 30px;
+    height: 80vh;
+    width: 400px;
+}
+.welcome-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+.welcome-text-container{
+    display: grid;
+    place-content: center;
+    height: 10vh;
+    margin-left: 5px;
+}
+.welcome-text{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+.ayzen-logo-login{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    animation: bounce-turn 4s infinite;
+}
+@keyframes bounce-turn {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.2) rotate(90deg);
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+    }
+    75% {
+        transform: scale(1.2) rotate(270deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+.register-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form .control {
+    margin: 0 0 24px;
+}
+
+.form .control input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    letter-spacing: 0.05em;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}
+
+.form .control input:hover,
+.form .control input:focus {
+    outline: none;
+    border: 0;
+}
+
+.form .btn {
+    width: 100%;
+    display: block;
+    padding: 14px 16px;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+.block-cube {
+    position: relative;
+}
+
+.block-cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(98, 98, 98) 37%, rgba(255, 255, 255, 0.85) 94%);
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+}
+
+.block-cube .bg-top .bg-inner {
+    bottom: 0;
+}
+
+.block-cube .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(98, 98, 98) 37%, rgba(255, 255, 255, 0.85) 94%);
+}
+
+.block-cube .bg-right {
+    position: absolute;
+    background: rgb(255, 255, 255);
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+}
+
+.block-cube .bg-right .bg-inner {
+    left: 0;
+}
+
+.block-cube .bg .bg-inner {
+    transition: all 0.2s ease-in-out;
+}
+
+.block-cube .bg-inner {
+    background: #212121;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+}
+
+.block-cube .text {
+    position: relative;
+    z-index: 2;
+}
+
+.block-cube.block-input input {
+    position: relative;
+    z-index: 2;
+}
+
+.block-cube.block-input input:focus ~ .bg-right .bg-inner,
+.block-cube.block-input input:focus ~ .bg-top .bg-inner,
+.block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+    top: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.block-cube.block-input .bg-top,
+.block-cube.block-input .bg-right,
+.block-cube.block-input .bg {
+    background: rgba(255, 255, 255, 0.5);
+    transition: background 0.2s ease-in-out;
+}
+
+.block-cube.block-input .bg-right,
+.block-cube.block-input .bg-top {
+    .bg-inner {
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.block-cube.block-input:hover .bg-top,
+.block-cube.block-input:hover .bg-right,
+.block-cube.block-input:hover .bg {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.block-cube.block-cube-hover:focus .bg .bg-inner,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
+    top: 100%;
+}
+
+.credits {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 15px 15px;
+    width: 100%;
+    z-index: 111;
+}
+
+.credits a {
+    opacity: 0.6;
+    color: #fff;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.credits a:hover {
+    opacity: 1;
+}
+

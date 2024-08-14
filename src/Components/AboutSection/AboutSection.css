@@ -1,0 +1,296 @@
+.about-section {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.ayzen-intro{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.about-desc{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+}
+@media (min-width: 640px) {
+    .tools{
+        width: 800px;
+    }
+}
+@media (max-width: 700px) {
+    .tools{
+        width: 500px;
+    }
+
+}
+
+.tools-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(166, 166, 166, 0.13);
+    margin-top: 10px;
+    border-radius: 25px;
+    padding: 70px;
+    height: 650px;
+    width: 100%;
+}
+.tools-icons{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: transparent;
+}
+.application-div{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(166, 166, 166, 0);
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 25px;
+    padding: 5px;
+    height: 800px;
+}
+
+
+.tools-row1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.tools-row2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.tools-row3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.gpt-icon, .bing-icon, .ayzen-logo, .gemini, .blackbox {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+
+
+
+
+.about-section:hover .gpt-icon,
+.about-section:hover .bing-icon,
+.about-section:hover .ayzen-logo,
+.about-section:hover .gemini,
+.about-section:hover .blackbox {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.tools-text-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    min-width: 400px;
+}
+.tools-title{
+    height: 100px;
+}
+.tools-title-text{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.application-title-text{
+    font-size: 35px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+.tool-desc{
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+}
+.floating1 {
+    animation-name: floating1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating1 {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }
+}
+.floating2 {
+    animation-name: floating2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+@keyframes floating2 {
+    0% { transform: translate(0,  15px); }
+    50%  { transform: translate(0, 0px); }
+    100%   { transform: translate(0, 15px); }
+}
+
+.application-div{
+    display: grid;
+    place-content: center;
+    width: 100%; /* Use percentage to make it responsive */
+    max-width: 1200px; /* Limit the maximum width */
+    height: auto; /* Auto height to allow the content to adjust */
+    padding: 20px; /* Add some padding */
+}
+@media (max-width: 700px) {
+    .application-div{
+        display: none;
+    }
+
+}
+.application-ui{
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+@media (min-width: 640px) {
+    .application-ui{
+        width: 1000px;
+    }
+}
+@media (max-width: 700px) {
+    .application-ui{
+        width: 400px;
+    }
+
+}
+.side-nav{
+    left: 0;
+    top: 0;
+    height: 600px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.73);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    backdrop-filter: blur(50px);
+}
+.new-chat-input{
+    width: 170px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 0.4px solid #626262;
+    pointer-events: none;
+}
+.new-chat{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.fa-plus-icon {
+    position: absolute;
+    left: 15px;
+    color: #aaa;
+    pointer-events: none;
+}
+.side-nav-aizen-logo{
+    width: 30px;
+    height: 30px;
+    fill: #ffffff;
+}
+.side-nav-aizen-text{
+    font-size: 15px;
+    font-weight: 200;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+.side-nav-aizen-div{
+    width: 90%;
+    height: 40px;
+    background-color: rgba(47, 47, 47, 0.53);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.main-content{
+    right: 0;
+    top: 0;
+    height: 600px;
+    width: 1000px;
+    margin-left: -10px;
+    background-color: rgba(14, 14, 14, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+}
+.main-content-ayzen-text{
+    font-size: 25px;
+    font-weight: 100;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+.cards{
+    background-color: rgba(47, 47, 47, 0.53);
+    border-radius: 10px;
+    height: 80px;
+    width: 200px;
+    margin: 10px;
+    color: rgba(255, 255, 255, 0.76);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.main-chat-input{
+    width: 600px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 0.3px solid rgba(206, 206, 206, 0.78);
+    pointer-events: none;
+}
+.main-content-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.send-icon{
+    position: absolute;
+    left: 40px;
+    color: #aaa;
+    pointer-events: none;
+}
